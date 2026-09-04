@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FPSKit — Calculadoras gratuitas para PC gaming</title>
+  <meta name="description" content="Calcula tu eDPI, convierte sensibilidad, estima descargas y el espacio de tus clips. Herramientas gratuitas, rápidas y sin registro.">
+  <meta name="theme-color" content="#080b10">
+  <meta property="og:type" content="website"><meta property="og:locale" content="es_ES"><meta property="og:title" content="FPSKit — Calculadoras para PC gaming"><meta property="og:description" content="Herramientas gratuitas y claras para ajustar, calcular y jugar."><meta property="og:image" content="https://fpskit.pages.dev/og.png"><meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="FPSKit, inicio"><span>FPS</span>Kit</a>
+    <nav aria-label="Navegación principal">
+      <a href="/edpi/">eDPI</a><a href="/sensibilidad/">Sensibilidad</a><a href="/tiempo-descarga/">Descargas</a><a href="/almacenamiento-clips/">Clips</a>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="hero">
+      <p class="eyebrow">Herramientas para PC gaming</p>
+      <h1>Ajusta. Calcula. Juega.</h1>
+      <p>Resultados claros para configurar tu ratón, planificar descargas y gestionar tus clips. Sin registro y sin enviar tus datos a ningún servidor.</p>
+    </section>
+    <section class="quick-tool" aria-labelledby="quick-title">
+      <div><p class="eyebrow">Cálculo rápido</p><h2 id="quick-title">Calcula tu eDPI</h2><p>Multiplica el DPI del ratón por la sensibilidad dentro del juego.</p></div>
+      <form class="calculator" data-calculator="edpi">
+        <label>DPI del ratón<input name="dpi" inputmode="decimal" type="number" min="1" step="1" value="800" required></label>
+        <label>Sensibilidad<input name="sensitivity" inputmode="decimal" type="number" min="0.001" step="any" value="0.35" required></label>
+        <output aria-live="polite"><span>Tu eDPI</span><strong data-result>280</strong></output>
+      </form>
+    </section>
+    <section aria-labelledby="tools-title"><p class="eyebrow">Calculadoras</p><h2 id="tools-title">Cuatro respuestas, cero rodeos</h2><div class="card-grid">
+      <a class="tool-card" href="/edpi/"><span>01</span><h3>Calculadora eDPI</h3><p>Compara la sensibilidad efectiva entre configuraciones.</p></a>
+      <a class="tool-card" href="/sensibilidad/"><span>02</span><h3>Cambiar DPI</h3><p>Mantén la misma sensación al cambiar el DPI.</p></a>
+      <a class="tool-card" href="/tiempo-descarga/"><span>03</span><h3>Tiempo de descarga</h3><p>Estima cuánto tardará un juego o una actualización.</p></a>
+      <a class="tool-card" href="/almacenamiento-clips/"><span>04</span><h3>Almacenamiento de clips</h3><p>Calcula cuánto espacio ocuparán tus grabaciones.</p></a>
+    </div></section>
+    <section class="article" aria-labelledby="why-title"><p class="eyebrow">Hecho para ser útil</p><h2 id="why-title">Resultados que puedes comprobar</h2><p>Cada herramienta enseña la fórmula, un ejemplo y los límites de la estimación. Los cálculos se ejecutan en tu navegador: no necesitas crear una cuenta ni enviar tus valores a un servidor.</p><div class="card-grid"><div class="tool-card"><span>RÁPIDO</span><h3>Sin esperas</h3><p>HTML, CSS y JavaScript ligero, sin librerías externas.</p></div><div class="tool-card"><span>CLARO</span><h3>Fórmula visible</h3><p>Sabes de dónde sale el resultado y cuándo no es comparable.</p></div><div class="tool-card"><span>PRIVADO</span><h3>Cálculo local</h3><p>Los valores introducidos no se almacenan ni se transmiten.</p></div><div class="tool-card"><span>ABIERTO</span><h3>En mejora continua</h3><p>Revisamos errores y ampliamos solo con herramientas útiles.</p></div></div></section>
+  </main>
+  <footer><p>© <span data-year></span> FPSKit</p><nav aria-label="Legal"><a href="/sobre-fpskit/">Sobre FPSKit</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a><a href="/aviso-legal/">Aviso legal</a></nav></footer>
+  <script src="/assets/app.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FPSKit","url":"https://fpskit.pages.dev/","inLanguage":"es","description":"Calculadoras gratuitas para PC gaming."}</script>
+</body>
+</html>

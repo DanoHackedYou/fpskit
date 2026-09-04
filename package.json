@@ -1,0 +1,11 @@
+{
+  "name": "fpskit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calculadoras estáticas y gratuitas para PC gaming.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "license": "UNLICENSED"
+}
