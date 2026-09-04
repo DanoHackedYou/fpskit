@@ -40,7 +40,7 @@ Antes de implementar cada ruta: revisar resultados actuales, intención de búsq
 
 ## Analytics, consentimiento y AdSense
 
-- GA4: propiedad `FPSKit` y flujo web `https://fpskit.pages.dev/` creados; ID de medición `G-YXBECNCST0`. Integración básica: no se descarga la etiqueta antes de aceptar, se mantienen denegados almacenamiento publicitario, datos de usuario para anuncios y personalización, y se permite retirar la elección.
+- GA4: propiedad `FPSKit` y flujo web `https://fpskit.pages.dev/` creados; ID de medición `G-YXBECNCST0`. Integración básica: no se descarga la etiqueta antes de aceptar, se mantienen denegados almacenamiento publicitario, datos de usuario para anuncios y personalización, y se permite retirar la elección. La recepción se validó en producción: el informe en tiempo real mostró la sesión de prueba desde España.
 - AdSense: no solicitado. La web necesita estar publicada, verificada, completar los datos legales del responsable, observar indexación/tráfico y ampliar utilidad real antes de evaluar una solicitud.
 - Métricas futuras: pageviews, sesiones, páginas de entrada, consultas, CTR orgánico, países, dispositivos, RPM e ingresos.
 
@@ -56,7 +56,6 @@ Beneficio acumulado: 0 €.
 ## Próximos pasos operativos
 
 1. Volver a comprobar en Search Console el estado del sitemap tras el periodo inicial de procesamiento.
-2. Confirmar en Analytics la recepción de eventos consentidos después del despliegue.
-3. Completar datos legales del responsable antes de monetizar.
-4. Recoger datos reales antes de priorizar nuevas herramientas o AdSense.
-5. Antes de AdSense, implantar una CMP certificada por Google para EEE, Reino Unido y Suiza y actualizar las políticas.
+2. Completar datos legales del responsable antes de monetizar.
+3. Recoger datos reales antes de priorizar nuevas herramientas o AdSense.
+4. Antes de AdSense, implantar una CMP certificada por Google para EEE, Reino Unido y Suiza y actualizar las políticas.
