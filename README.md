@@ -22,7 +22,7 @@ Para una vista local, sirve la raíz con cualquier servidor HTTP estático. En C
 
 ## Privacidad y monetización
 
-La versión inicial no instala analítica ni publicidad. Antes de habilitar GA4 o AdSense deben completarse el responsable y contacto legal, revisar los requisitos vigentes y configurar consentimiento para España/EEE cuando proceda.
+GA4 se carga únicamente después de una aceptación expresa. Rechazar no limita las calculadoras y la elección puede cambiarse desde el pie de página. AdSense no está activo; antes de habilitarlo deben completarse el responsable y contacto legal y utilizarse una CMP certificada por Google para los territorios en los que sea obligatorio.
 
 ## Estado
 

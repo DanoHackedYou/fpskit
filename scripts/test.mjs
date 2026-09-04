@@ -21,6 +21,10 @@ assert.equal((50e6 * 120 * 20) / 8 / 1e9, 15, 'clips');
 
 const script = await readFile(new URL('../assets/app.js', import.meta.url), 'utf8');
 new Function(script);
+assert.match(script, /G-YXBECNCST0/);
+assert.match(script, /analytics_storage: 'granted'/);
+assert.ok(script.indexOf("consent', 'default'") < script.indexOf("window.gtag('config'"));
+assert.doesNotMatch(await readFile(new URL('../index.html', import.meta.url), 'utf8'), /googletagmanager\.com/);
 const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8');
 assert.equal((sitemap.match(/<url>/g) || []).length, 6);
 console.log(`FPSKit: ${pages.length} páginas y 4 fórmulas verificadas`);

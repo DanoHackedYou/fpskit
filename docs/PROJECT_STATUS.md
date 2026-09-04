@@ -14,8 +14,8 @@ Actualizado: 4 de septiembre de 2026.
 - Arquitectura: web estática, HTML semántico, CSS y JavaScript sin dependencias en producción.
 - Rutas: inicio, cuatro herramientas, sobre el proyecto, privacidad, cookies, aviso legal y 404.
 - SEO: títulos y descripciones únicos; canonical, sitemap y robots con URL pública; enlazado interno y contenido explicativo.
-- Privacidad: no hay cuentas, cookies propias, analítica ni anuncios.
-- Servicios: Cloudflare Pages activo; propiedad URL de Search Console en proceso de verificación; Analytics y AdSense todavía no configurados.
+- Privacidad: no hay cuentas ni anuncios. GA4 solo se carga tras una aceptación expresa; rechazo y cambio de elección disponibles en todas las páginas.
+- Servicios: Cloudflare Pages activo; propiedad URL de Search Console verificada; sitemap enviado (el primer estado mostrado fue «No se ha podido obtener», aunque el recurso público respondía correctamente); propiedad y flujo web de Analytics configurados. AdSense no está configurado.
 - GitHub: repositorio público `DanoHackedYou/fpskit`, rama de producción `main`.
 - Cloudflare Pages: `https://fpskit.pages.dev/`, integración Git activa, configuración `npm run build` → `dist`.
 
@@ -40,7 +40,7 @@ Antes de implementar cada ruta: revisar resultados actuales, intención de búsq
 
 ## Analytics, consentimiento y AdSense
 
-- GA4: no instalado. Antes de activarlo se revisarán las condiciones vigentes de Google y el marco España/EEE; las etiquetas opcionales no deben cargarse antes de la elección aplicable.
+- GA4: propiedad `FPSKit` y flujo web `https://fpskit.pages.dev/` creados; ID de medición `G-YXBECNCST0`. Integración básica: no se descarga la etiqueta antes de aceptar, se mantienen denegados almacenamiento publicitario, datos de usuario para anuncios y personalización, y se permite retirar la elección.
 - AdSense: no solicitado. La web necesita estar publicada, verificada, completar los datos legales del responsable, observar indexación/tráfico y ampliar utilidad real antes de evaluar una solicitud.
 - Métricas futuras: pageviews, sesiones, páginas de entrada, consultas, CTR orgánico, países, dispositivos, RPM e ingresos.
 
@@ -55,8 +55,8 @@ Beneficio acumulado: 0 €.
 
 ## Próximos pasos operativos
 
-1. Ejecutar QA público y corregir cualquier incidencia.
-2. Completar datos legales del responsable antes de monetizar.
-3. Configurar Search Console y enviar el sitemap.
-4. Evaluar GA4 y consentimiento con requisitos actuales; no activar por defecto.
-5. Recoger datos reales antes de priorizar nuevas herramientas o AdSense.
+1. Volver a comprobar en Search Console el estado del sitemap tras el periodo inicial de procesamiento.
+2. Confirmar en Analytics la recepción de eventos consentidos después del despliegue.
+3. Completar datos legales del responsable antes de monetizar.
+4. Recoger datos reales antes de priorizar nuevas herramientas o AdSense.
+5. Antes de AdSense, implantar una CMP certificada por Google para EEE, Reino Unido y Suiza y actualizar las políticas.
