@@ -1,11 +1,10 @@
 # FPSKit
 
-FPSKit es una web estática en español con calculadoras gratuitas para PC gaming. La primera versión incluye:
+FPSKit es una web estática en español con nueve calculadoras gratuitas para PC gaming, organizadas en tres categorías:
 
-- cálculo de eDPI;
-- conversión de sensibilidad al cambiar DPI;
-- estimación del tiempo de descarga;
-- estimación de almacenamiento para clips.
+- Ratón y puntería: eDPI, conversión de sensibilidad y polling rate.
+- Rendimiento y pantalla: FPS a milisegundos, Hz frente a FPS y resolución/aspecto.
+- Descargas y grabación: tiempo de descarga, espacio para clips y bitrate/tamaño de vídeo.
 
 Cada herramienta explica su fórmula, ejemplo, limitaciones y casos de uso. Los cálculos se ejecutan localmente en el navegador y no requieren cuenta.
 

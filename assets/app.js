@@ -2,6 +2,18 @@
   const format = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 3 });
   const compact = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 2 });
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
+  const path = location.pathname;
+  const categoryRoutes = {
+    mouse: ['/edpi/', '/sensibilidad/', '/polling-rate/', '/raton-y-punteria/'],
+    performance: ['/tiempo-fotograma/', '/hz-vs-fps/', '/resolucion-aspecto/', '/rendimiento-y-pantalla/'],
+    files: ['/tiempo-descarga/', '/almacenamiento-clips/', '/bitrate-video/', '/descargas-y-grabacion/']
+  };
+  const activeCategory = Object.entries(categoryRoutes).find(([, routes]) => routes.includes(path))?.[0];
+  const headerNav = document.querySelector('.site-header nav');
+  if (headerNav) {
+    const current = (category) => activeCategory === category ? ' aria-current="page"' : '';
+    headerNav.innerHTML = `<a${current('mouse')} href="/raton-y-punteria/">Ratón</a><a${current('performance')} href="/rendimiento-y-pantalla/">Rendimiento</a><a${current('files')} href="/descargas-y-grabacion/">Archivos</a>`;
+  }
   const valid = (...values) => values.every((value) => Number.isFinite(value) && value > 0);
   const duration = (seconds) => {
     const rounded = Math.ceil(seconds);
@@ -47,6 +59,50 @@
       const ok = valid(bitrate, minutes, count);
       const gigabytes = ok ? (bitrate * 1e6 * minutes * 60 * count) / 8 / 1e9 : 0;
       setResult(form, ok ? `${compact.format(gigabytes)} GB` : '—', ok ? `${compact.format(gigabytes / count)} GB por clip (estimación decimal)` : 'Introduce valores mayores que cero.');
+    },
+    frameTime(form) {
+      const fps = Number(form.elements.fps.value);
+      const ok = valid(fps);
+      const milliseconds = ok ? 1000 / fps : 0;
+      setResult(form, ok ? `${compact.format(milliseconds)} ms` : '—', ok ? `Tiempo máximo por fotograma para mantener ${format.format(fps)} FPS` : 'Introduce una tasa de FPS mayor que cero.');
+    },
+    polling(form) {
+      const rate = Number(form.elements.rate.value);
+      const ok = valid(rate);
+      const interval = ok ? 1000 / rate : 0;
+      setResult(form, ok ? `${compact.format(interval)} ms` : '—', ok ? `Intervalo medio teórico de espera: ${compact.format(interval / 2)} ms` : 'Introduce una frecuencia mayor que cero.');
+    },
+    bitrate(form) {
+      const video = Number(form.elements.video.value);
+      const audio = Number(form.elements.audio.value);
+      const minutes = Number(form.elements.minutes.value);
+      const ok = valid(video, minutes) && Number.isFinite(audio) && audio >= 0;
+      const bitsPerSecond = ok ? (video * 1e6) + (audio * 1e3) : 0;
+      const gigabytes = ok ? (bitsPerSecond * minutes * 60) / 8 / 1e9 : 0;
+      const gigabytesPerHour = ok ? (bitsPerSecond * 3600) / 8 / 1e9 : 0;
+      setResult(form, ok ? `${compact.format(gigabytes)} GB` : '—', ok ? `${compact.format(gigabytesPerHour)} GB por hora · incluye audio` : 'Revisa bitrate, audio y duración.');
+    },
+    refresh(form) {
+      const fps = Number(form.elements.fps.value);
+      const hz = Number(form.elements.hz.value);
+      const ok = valid(fps, hz);
+      const visible = ok ? Math.min(fps, hz) : 0;
+      const relation = ok
+        ? (fps >= hz ? `${compact.format(fps - hz)} FPS superan la frecuencia del monitor` : `cada fotograma dura ${compact.format(hz / fps)} ciclos de refresco de media`)
+        : 'Introduce valores mayores que cero.';
+      setResult(form, ok ? `${format.format(visible)} fps` : '—', ok ? `Máximo teórico de fotogramas completos distintos por segundo; ${relation}` : relation);
+    },
+    resolution(form) {
+      const width = Number(form.elements.width.value);
+      const height = Number(form.elements.height.value);
+      const baseWidth = Number(form.elements.baseWidth.value);
+      const baseHeight = Number(form.elements.baseHeight.value);
+      const ok = valid(width, height, baseWidth, baseHeight) && [width, height, baseWidth, baseHeight].every(Number.isInteger);
+      const gcd = (a, b) => (b ? gcd(b, a % b) : a);
+      const divisor = ok ? gcd(width, height) : 1;
+      const megapixels = ok ? (width * height) / 1e6 : 0;
+      const relative = ok ? (width * height * 100) / (baseWidth * baseHeight) : 0;
+      setResult(form, ok ? `${width / divisor}:${height / divisor}` : '—', ok ? `${compact.format(megapixels)} MP · ${compact.format(relative)} % de píxeles frente a ${baseWidth}×${baseHeight}` : 'Usa dimensiones enteras mayores que cero.');
     }
   };
   document.querySelectorAll('[data-calculator]').forEach((form) => {
@@ -147,6 +203,10 @@
 
   const footerNav = document.querySelector('footer nav');
   if (footerNav) {
+    const toolsLink = document.createElement('a');
+    toolsLink.href = '/#categorias';
+    toolsLink.textContent = 'Herramientas';
+    footerNav.prepend(toolsLink);
     const manageButton = document.createElement('button');
     manageButton.className = 'privacy-settings';
     manageButton.type = 'button';
