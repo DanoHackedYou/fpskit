@@ -27,4 +27,6 @@ assert.ok(script.indexOf("consent', 'default'") < script.indexOf("window.gtag('c
 assert.doesNotMatch(await readFile(new URL('../index.html', import.meta.url), 'utf8'), /googletagmanager\.com/);
 const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8');
 assert.equal((sitemap.match(/<url>/g) || []).length, 6);
+const buildScript = await readFile(new URL('./build.mjs', import.meta.url), 'utf8');
+assert.match(buildScript, /assetVersion/);
 console.log(`FPSKit: ${pages.length} páginas y 4 fórmulas verificadas`);
