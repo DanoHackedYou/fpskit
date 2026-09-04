@@ -10,7 +10,7 @@ const entries = [
   'privacidad', 'cookies', 'aviso-legal', 'contacto', 'favicon.svg', 'og.png',
   'raton-y-punteria', 'rendimiento-y-pantalla', 'descargas-y-grabacion',
   'tiempo-fotograma', 'polling-rate', 'hz-vs-fps', 'resolucion-aspecto',
-  'bitrate-video', 'robots.txt', 'sitemap.xml', '_headers', '_redirects'
+  'bitrate-video', 'robots.txt', 'sitemap.xml', 'ads.txt', '_headers', '_redirects'
 ];
 
 for (const entry of entries) {
@@ -26,11 +26,13 @@ const htmlEntries = [
   'tiempo-fotograma/index.html', 'polling-rate/index.html',
   'hz-vs-fps/index.html', 'resolucion-aspecto/index.html', 'bitrate-video/index.html'
 ];
-const assetVersion = '20260904-legal';
+const assetVersion = '20260904-adsense';
+const adsenseAccountMeta = '<meta name="google-adsense-account" content="ca-pub-3665999275525388">';
 for (const entry of htmlEntries) {
   const file = new URL(`../dist/${entry}`, import.meta.url);
   const html = await readFile(file, 'utf8');
   await writeFile(file, html
+    .replace('<meta charset="utf-8">', `<meta charset="utf-8">${adsenseAccountMeta}`)
     .replaceAll('/assets/styles.css', `/assets/styles.css?v=${assetVersion}`)
     .replaceAll('/assets/app.js', `/assets/app.js?v=${assetVersion}`));
 }

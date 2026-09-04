@@ -50,4 +50,7 @@ const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8
 assert.equal((sitemap.match(/<url>/g) || []).length, 14);
 const buildScript = await readFile(new URL('./build.mjs', import.meta.url), 'utf8');
 assert.match(buildScript, /assetVersion/);
+assert.match(buildScript, /google-adsense-account/);
+assert.match(buildScript, /ca-pub-3665999275525388/);
+assert.equal((await readFile(new URL('../ads.txt', import.meta.url), 'utf8')).trim(), 'google.com, pub-3665999275525388, DIRECT, f08c47fec0942fa0');
 console.log(`FPSKit: ${pages.length} páginas y 9 fórmulas verificadas`);
