@@ -6,18 +6,18 @@ Actualizado: 4 de septiembre de 2026.
 
 | Nº | Proyecto | Nicho | Estado | URL | Repositorio | Coste acumulado | Ingresos |
 |---:|---|---|---|---|---|---:|---:|
-| 01 | FPSKit | Herramientas PC gaming | Preparado para publicación | Pendiente | Pendiente | 0 € | 0 € |
+| 01 | FPSKit | Herramientas PC gaming | Publicada | https://fpskit.pages.dev/ | https://github.com/DanoHackedYou/fpskit | 0 € | 0 € |
 
 ## FPSKit — estado actual
 
 - Fuente original: el Work recibido no contenía el MVP ni un ZIP; solo contenía el encargo. El sitio se reconstruyó desde cero conforme a la especificación.
 - Arquitectura: web estática, HTML semántico, CSS y JavaScript sin dependencias en producción.
 - Rutas: inicio, cuatro herramientas, sobre el proyecto, privacidad, cookies, aviso legal y 404.
-- SEO: títulos y descripciones únicos; sitemap y robots preparados con URL provisional; enlazado interno y contenido explicativo.
+- SEO: títulos y descripciones únicos; canonical, sitemap y robots con URL pública; enlazado interno y contenido explicativo.
 - Privacidad: no hay cuentas, cookies propias, analítica ni anuncios.
-- Servicios: alojamiento, Search Console, Analytics y AdSense todavía no configurados.
-- GitHub: objetivo `DanoHackedYou/fpskit`; pendiente de creación o conexión.
-- Cloudflare Pages: proyecto pendiente; configuración prevista `npm run build` → `dist`.
+- Servicios: Cloudflare Pages activo; Search Console, Analytics y AdSense todavía no configurados.
+- GitHub: repositorio público `DanoHackedYou/fpskit`, rama de producción `main`.
+- Cloudflare Pages: `https://fpskit.pages.dev/`, integración Git activa, configuración `npm run build` → `dist`.
 
 ## QA
 
@@ -55,11 +55,8 @@ Beneficio acumulado: 0 €.
 
 ## Próximos pasos operativos
 
-1. Crear o conectar el repositorio público `fpskit` y subir `main`.
-2. Crear Cloudflare Pages enlazado al repositorio y desplegar.
-3. Sustituir la URL provisional `https://fpskit.pages.dev` si Cloudflare asigna otra.
-4. Ejecutar QA público y corregir cualquier incidencia.
-5. Completar datos legales del responsable antes de monetizar.
-6. Configurar Search Console y enviar el sitemap.
-7. Evaluar GA4 y consentimiento con requisitos actuales; no activar por defecto.
-8. Recoger datos reales antes de priorizar nuevas herramientas o AdSense.
+1. Ejecutar QA público y corregir cualquier incidencia.
+2. Completar datos legales del responsable antes de monetizar.
+3. Configurar Search Console y enviar el sitemap.
+4. Evaluar GA4 y consentimiento con requisitos actuales; no activar por defecto.
+5. Recoger datos reales antes de priorizar nuevas herramientas o AdSense.
