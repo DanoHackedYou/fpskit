@@ -15,7 +15,7 @@ Actualizado: 4 de septiembre de 2026.
 - Rutas: inicio, cuatro herramientas, sobre el proyecto, privacidad, cookies, aviso legal y 404.
 - SEO: títulos y descripciones únicos; canonical, sitemap y robots con URL pública; enlazado interno y contenido explicativo.
 - Privacidad: no hay cuentas, cookies propias, analítica ni anuncios.
-- Servicios: Cloudflare Pages activo; Search Console, Analytics y AdSense todavía no configurados.
+- Servicios: Cloudflare Pages activo; propiedad URL de Search Console en proceso de verificación; Analytics y AdSense todavía no configurados.
 - GitHub: repositorio público `DanoHackedYou/fpskit`, rama de producción `main`.
 - Cloudflare Pages: `https://fpskit.pages.dev/`, integración Git activa, configuración `npm run build` → `dist`.
 
