@@ -14,7 +14,7 @@ Actualizado: 4 de septiembre de 2026.
 - Arquitectura: web estática, HTML semántico, CSS y JavaScript sin dependencias en producción.
 - Rutas: inicio, tres categorías, nueve herramientas, sobre el proyecto, privacidad, cookies, aviso legal y 404.
 - SEO: títulos y descripciones únicos; canonical, sitemap y robots con URL pública; enlazado interno y contenido explicativo.
-- Privacidad: no hay cuentas ni anuncios. GA4 solo se carga tras una aceptación expresa; rechazo y cambio de elección disponibles en todas las páginas.
+- Privacidad y legal: responsable, domicilio y contacto publicados; no hay cuentas ni anuncios. GA4 solo se carga tras una aceptación expresa; rechazo y cambio de elección disponibles en todas las páginas.
 - Servicios: Cloudflare Pages activo; propiedad URL de Search Console verificada; sitemap enviado (el primer estado mostrado fue «No se ha podido obtener», aunque el recurso público respondía correctamente); propiedad y flujo web de Analytics configurados. AdSense no está configurado.
 - GitHub: repositorio público `DanoHackedYou/fpskit`, rama de producción `main`.
 - Cloudflare Pages: `https://fpskit.pages.dev/`, integración Git activa, configuración `npm run build` → `dist`.
@@ -47,7 +47,7 @@ Antes de implementar cada ruta: revisar resultados actuales, intención de búsq
 ## Analytics, consentimiento y AdSense
 
 - GA4: propiedad `FPSKit` y flujo web `https://fpskit.pages.dev/` creados; ID de medición `G-YXBECNCST0`. Integración básica: no se descarga la etiqueta antes de aceptar, se mantienen denegados almacenamiento publicitario, datos de usuario para anuncios y personalización, y se permite retirar la elección. La recepción se validó en producción: el informe en tiempo real mostró la sesión de prueba desde España.
-- AdSense: no solicitado. La web necesita estar publicada, verificada, completar los datos legales del responsable, observar indexación/tráfico y ampliar utilidad real antes de evaluar una solicitud.
+- AdSense: no solicitado. El contenido y la identificación legal ya están preparados; faltan crear la cuenta, verificar el sitio, publicar `ads.txt`, configurar una CMP certificada y superar la revisión.
 - Métricas futuras: pageviews, sesiones, páginas de entrada, consultas, CTR orgánico, países, dispositivos, RPM e ingresos.
 
 ## Costes e ingresos
@@ -62,6 +62,6 @@ Beneficio acumulado: 0 €.
 ## Próximos pasos operativos
 
 1. Volver a comprobar en Search Console el estado del sitemap tras el periodo inicial de procesamiento.
-2. Completar datos legales del responsable antes de monetizar.
-3. Recoger datos reales antes de priorizar nuevas herramientas o AdSense.
-4. Antes de AdSense, implantar una CMP certificada por Google para EEE, Reino Unido y Suiza y actualizar las políticas.
+2. Crear la única cuenta AdSense del titular y probar la admisión de `fpskit.pages.dev`.
+3. Verificar el sitio con metaetiqueta, publicar `ads.txt` con el ID real y solicitar revisión.
+4. Antes de cargar anuncios, implantar una CMP certificada por Google para EEE, Reino Unido y Suiza y actualizar las políticas publicitarias.

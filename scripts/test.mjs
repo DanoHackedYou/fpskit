@@ -7,9 +7,9 @@ const pages = [
   'hz-vs-fps/', 'resolucion-aspecto/', 'tiempo-descarga/',
   'almacenamiento-clips/', 'bitrate-video/', 'raton-y-punteria/',
   'rendimiento-y-pantalla/', 'descargas-y-grabacion/', 'sobre-fpskit/',
-  'privacidad/', 'cookies/', 'aviso-legal/'
+  'privacidad/', 'cookies/', 'aviso-legal/', 'contacto/'
 ];
-const indexable = pages.filter((route) => !['privacidad/', 'cookies/', 'aviso-legal/'].includes(route));
+const indexable = pages.filter((route) => !['privacidad/', 'cookies/', 'aviso-legal/', 'contacto/'].includes(route));
 const titles = new Set();
 const descriptions = new Set();
 for (const route of pages) {

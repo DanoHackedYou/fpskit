@@ -21,7 +21,7 @@ Para una vista local, sirve la raíz con cualquier servidor HTTP estático. En C
 
 ## Privacidad y monetización
 
-GA4 se carga únicamente después de una aceptación expresa. Rechazar no limita las calculadoras y la elección puede cambiarse desde el pie de página. AdSense no está activo; antes de habilitarlo deben completarse el responsable y contacto legal y utilizarse una CMP certificada por Google para los territorios en los que sea obligatorio.
+GA4 se carga únicamente después de una aceptación expresa. Rechazar no limita las calculadoras y la elección puede cambiarse desde el pie de página. El responsable, contacto y aviso legal están publicados. AdSense no está activo; antes de habilitarlo debe utilizarse una CMP certificada por Google para los territorios en los que sea obligatorio.
 
 ## Estado
 

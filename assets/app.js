@@ -207,6 +207,10 @@
     toolsLink.href = '/#categorias';
     toolsLink.textContent = 'Herramientas';
     footerNav.prepend(toolsLink);
+    const contactLink = document.createElement('a');
+    contactLink.href = '/contacto/';
+    contactLink.textContent = 'Contacto';
+    toolsLink.after(contactLink);
     const manageButton = document.createElement('button');
     manageButton.className = 'privacy-settings';
     manageButton.type = 'button';
